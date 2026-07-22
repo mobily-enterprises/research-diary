@@ -1,0 +1,68 @@
+---
+layout: default
+title: AI research records
+body_class: home
+---
+{% assign research_desc = site.research | sort: "started" | reverse %}
+{% assign active_count = site.research | where: "status", "running" | size %}
+<section class="home-hero shell">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="live-dot"></span> FY {{ site.tax_year }}</p>
+    <h1>AI Research Diary</h1>
+    <p class="hero-intro">Dated technical records of specific research questions, background searches, hypotheses, experiments, results and conclusions.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ '/research/' | relative_url }}">Read the research entries <span>→</span></a>
+    </div>
+  </div>
+  <div class="protocol-card" aria-label="Systematic progression of work">
+    <div class="protocol-head">
+      <span class="mono">ENTRY STRUCTURE</span>
+      <span class="protocol-state"><i></i> core activity</span>
+    </div>
+    <div class="protocol-flow">
+      <div class="protocol-node active"><span>01</span><strong>Hypothesis</strong><small>state a testable prediction</small></div>
+      <div class="protocol-link"><i></i></div>
+      <div class="protocol-node"><span>02</span><strong>Experiment</strong><small>record method and controls</small></div>
+      <div class="protocol-link"><i></i></div>
+      <div class="protocol-node"><span>03</span><strong>Evaluation</strong><small>compare results with criteria</small></div>
+      <div class="protocol-link"><i></i></div>
+      <div class="protocol-node"><span>04</span><strong>Conclusion</strong><small>record what was established</small></div>
+    </div>
+    <div class="protocol-foot mono"><span>background research</span><span>recorded conclusion</span></div>
+  </div>
+</section>
+
+<section class="metrics-strip">
+  <div class="shell metrics-grid">
+    <div><strong data-count="{{ site.research | size }}">{{ site.research | size }}</strong><span>research entries</span></div>
+    <div><strong data-count="{{ site.projects | size }}">{{ site.projects | size }}</strong><span>research projects</span></div>
+    <div><strong data-count="{{ active_count }}">{{ active_count }}</strong><span>currently running</span></div>
+    <div class="trace-metric"><strong>Git</strong><span>commit history retained</span></div>
+  </div>
+</section>
+
+<section class="latest-section shell">
+  <div class="section-heading">
+    <div><p class="eyebrow">Latest entries</p><h2>Recent research</h2></div>
+    <a class="text-link" href="{{ '/research/' | relative_url }}">View all entries <span>→</span></a>
+  </div>
+  <div class="research-grid">
+    {% for entry in research_desc limit: 3 %}{% include research-card.html entry=entry %}{% endfor %}
+  </div>
+</section>
+
+<section class="principles-section shell">
+  <div class="section-heading">
+    <div><p class="eyebrow">Record-keeping approach</p><h2>How entries are maintained</h2></div>
+    <p>The diary records when decisions were made, how experiments were run and which files support the reported results.</p>
+  </div>
+  <div class="principles-grid">
+    <article><span class="principle-glyph">01</span><h3>Record plans first</h3><p>Background searches, hypotheses and evaluation criteria are committed before experimental work starts.</p></article>
+    <article><span class="principle-glyph">02</span><h3>Keep complete results</h3><p>Entries include unsuccessful runs, unexpected behaviour and results that do not support the hypothesis.</p></article>
+    <article><span class="principle-glyph">03</span><h3>Use stable references</h3><p>Every entry has an identifier, dates, named investigators and a link to its project and core activity.</p></article>
+  </div>
+</section>
+
+<section class="home-disclaimer shell">
+  {% include disclaimer.html %}
+</section>

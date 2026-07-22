@@ -1,0 +1,9 @@
+stage,program_documents,generated_targets,primary_oracle,passed,failed,intervention,observation
+Evolutionary smoke test,1,1,Focused behaviour check,1,0,"No manual source repair","Program edit produced a one-line implementation change; implementation edit produced a one-line Program change"
+Reading Garden first build,22,21,Application behavioural suite,15,0,"Implementation defects corrected before clean rebuild","Real multi-layer application exposed transitive type, data-provenance, output-boundary and rounding defects"
+Reading Garden clean regeneration,22,21,Application behavioural suite,15,0,"One Program clarification and one generic JavaScript translator correction; no retained manual JavaScript patch","5 modules were byte-identical and 16 used different private implementations"
+ProgSync clean self-host A,34,33,Untouched original tests,14,59,"No generated JavaScript manually edited","Structural surface checks accepted implementations with incompatible cross-module data contracts"
+ProgSync repaired self-host A,34,33,Untouched original tests,73,0,"Program, prompts, validators and bounded candidate repairs changed","First complete behavioural pass; not a clean-repeat proof"
+ProgSync clean self-host B initial,34,33,Untouched original tests,39,34,"No original JavaScript supplied","One missing completion dependency caused a 20-test cascade"
+ProgSync clean self-host B after recorded corrections,34,33,Untouched original tests,73,0,"Program and compiler corrected; implementation changed only through atomic generation","Second repaired pass; still not a zero-intervention repeat"
+ProgSync clean self-host C,34,33,Untouched original tests,0,73,"Run incomplete at end of record","5 of 33 targets had generated successfully when the research period closed"

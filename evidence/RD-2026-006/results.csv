@@ -1,0 +1,11 @@
+stage,subject_files,measure,observation,decision
+Initial File City,600,live interaction,"The city was visually useful but sluggish with hundreds of independent meshes, shadows and per-file lights","Replace repeated objects with GPU instances and remove decorative work"
+Rendering rewrite,600,live interaction,"Two instanced skyline draws, merged directory geometry, capped pixel density and demand rendering were reported as snappy in the same trial","Keep performance as a first-order semantic constraint"
+Campus layout,600,spatial inspection,"Root files, src and packages required visible separation without becoming three unrelated distant worlds","Use adapter-defined campus slabs with a controlled void"
+Directory hierarchy,600,spatial inspection,"Walls alone did not communicate nested depth reliably","Use raised terraces and keep folder labels on visible faces"
+Preview reliability,600,revision marker,"The browser repeatedly showed stale source despite hard reloads","Alias the workspace package to first-party source; verify revisions 002 to 003 on one open page without restart"
+Selection lens,600,relationship inspection,"Showing only selected imports while greying unrelated buildings and slabs made local evidence readable","Keep full graph hidden by default"
+Subsystem dependencies,600,evidence inspection,"A declared package dependency could exist without a direct import because of load order or dependency injection","Distinguish import, injection, capability, load-order and unresolved declaration evidence"
+Connection bundling,600,relationship inspection,"Repeated use of a shared export produced an unreadable web","Aggregate at owned directory collection points and expose exact last-mile files on demand"
+Scattered ownership,600,honesty check,"A badly bounded subsystem could have several physical fragments","Draw one collection point per proven fragment rather than inventing a single physical home"
+Architectural strata,600,live design iteration,"Small vertical offsets looked like layout nudges rather than software layers","Use discrete planes separated by enough void to preserve the layered meaning; implementation remained in progress at period end"

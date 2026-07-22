@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for item in site.pages %}{% unless item.url contains '.xml' or item.url contains '.txt' %}
+  <url><loc>{{ item.url | absolute_url | xml_escape }}</loc></url>
+  {% endunless %}{% endfor %}
+  {% for item in site.research %}
+  <url><loc>{{ item.url | absolute_url | xml_escape }}</loc><lastmod>{{ item.ended | date_to_xmlschema }}</lastmod></url>
+  {% endfor %}
+  {% for item in site.projects %}
+  <url><loc>{{ item.url | absolute_url | xml_escape }}</loc></url>
+  {% endfor %}
+</urlset>
+

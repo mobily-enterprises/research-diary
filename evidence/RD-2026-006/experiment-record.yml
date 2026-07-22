@@ -1,0 +1,52 @@
+entry_id: RD-2026-006
+project_id: PRJ-2026-003
+core_activity: CA-01
+title: Can six hundred source files become a usable three-dimensional city?
+timezone: Australia/Perth
+period:
+  started: 2026-07-12
+  ended: 2026-07-15
+research_effort:
+  hours: 30
+  basis: estimated
+  note: Reconcile this public estimate with private contemporaneous company time records.
+source_record:
+  codex_session_id: 019f4fcf-b843-7222-b270-c23e8ec3a77a
+  repository: mobily-enterprises/vibe64
+  worktree_branch: system-world-v1
+  primary_commit: 218ae6305c380746f5f8da363acb17fac946b20e
+  note: >-
+    The complete live-evaluation transcript, renderer revisions, screenshots and
+    intermediate worktree state are retained privately. The entry records the
+    observed sequence, including rejected changes and unfinished work.
+hypothesis:
+  recorded_at: "2026-07-12 08:35 +0800"
+  statement: >-
+    If the filesystem remains the stable spatial ground truth, with directories
+    as nested precincts, files as buildings sized by physical lines of code and
+    architecture added as a selective overlay, then a repository of roughly six
+    hundred source files can remain responsive and reveal both physical and
+    logical structure without collapsing into a dependency web.
+primary_success_condition: >-
+  Render the complete Vibe64 source set at an interactively usable speed; keep
+  directory depth, file identity and large-file mass visible; allow selection
+  to expose exact local relationships; and add subsystem relationships without
+  drawing unsupported file-to-file claims or an unreadable global web.
+controls:
+  - The same Vibe64 working tree and generated 600-file source model were used throughout the trial.
+  - File size represented physical line count rather than an inferred complexity score.
+  - Canonical file and directory positions remained deterministic.
+  - Relationship claims retained their evidence kind and exact endpoints where known.
+  - Visual changes were evaluated in one live browser by the product inventor.
+result: inconclusive
+reason: >-
+  The prototype became subjectively responsive and the evidence model supported
+  exact imports, declared-only dependencies and subsystem bundles. However, no
+  frame-time target or comparative comprehension protocol had been fixed in
+  advance, and the recorded period ended while architectural layers were still
+  being revised.
+next_test: >-
+  Freeze a representative repository snapshot and define a repeatable trial:
+  measured frame-time and interaction latency at several file counts, followed
+  by timed architecture questions answered in File City and in a conventional
+  file tree by participants who did not build the system.

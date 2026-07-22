@@ -1,0 +1,8 @@
+stage,observation,decision
+Premise,"Code production was becoming less central, while responsibility, contracts and architecture remained human engineering concerns","Test a non-code system view rather than another source browser"
+Prior-art review,"Existing architecture maps, software catalogues, semantic indexes and runtime diagrams each covered part of the problem","Use two linked layers: technical evidence and understandable system meaning"
+Scope reduction,"A complete first release mixed extraction, history, repair, comparison and visualisation","Run a narrow truth spike on Vibe64 itself"
+Adapter ownership,"The first extractor was placed in JSKIT even though Vibe64 could not require Laravel, Next.js or other frameworks to cooperate","Move adapter ownership into Vibe64 and use JSKIT only as the first understood framework"
+Real scan,"The adapter classified 600 source files across 17 packages and resolved code imports; image references were separated as assets","Proceed to a live System world"
+First 3D world,"Client and server realms, subsystem territories and connector metaphors rendered and were navigable","Ask the user to evaluate the representation rather than accepting implementation completion"
+Human evaluation,"The first live world was judged too abstract","Reject the tested primary representation and pivot to a filesystem-grounded city"

@@ -1,0 +1,53 @@
+entry_id: RD-2026-005
+project_id: PRJ-2026-003
+core_activity: CA-01
+title: Can software architecture become the primary view of a codebase?
+timezone: Australia/Perth
+period:
+  started: 2026-07-11
+  ended: 2026-07-14
+research_effort:
+  hours: 28
+  basis: estimated
+  note: Reconcile this public estimate with private contemporaneous company time records.
+source_record:
+  codex_session_id: 019f4fcf-b843-7222-b270-c23e8ec3a77a
+  repositories:
+    - mobily-enterprises/vibe64
+    - mobily-enterprises/vibe64-online
+  retained_artifacts:
+    - graph-system.md design record
+    - initial System world implementation in the isolated system-world-v1 worktree
+  note: >-
+    The complete conversation, intermediate source and screenshots are retained
+    privately. This public record omits machine paths, customer material,
+    credentials and private remuneration information.
+hypothesis:
+  recorded_at: "2026-07-11 14:21 +0800"
+  statement: >-
+    If framework-specific evidence can be compiled into a small common system
+    model and projected through a constrained three-dimensional visual grammar,
+    a systems-minded user should be able to identify responsibilities,
+    interfaces, providers, consumers and structural risks without reading the
+    implementation source.
+primary_success_condition: >-
+  Use Vibe64 itself to show its major subsystems, select a real operation, trace
+  it to evidence-backed providers and consumers, expose uncertainty rather than
+  filling gaps, and make at least one useful architectural question answerable
+  without opening source.
+controls:
+  - Vibe64 was the single real subject rather than a purpose-built example.
+  - The first adapter was limited to JSKIT while the common model remained framework-neutral.
+  - Mechanically derived, declared, observed and inferred claims were kept conceptually distinct.
+  - The System tool was scoped to the current working tree of an active session.
+  - The user evaluated the live prototype before its visual assumptions were accepted.
+result: rejected
+reason: >-
+  The extraction and model were technically viable, but the first client/server
+  system world was judged too abstract during live use. It did not provide a
+  sufficiently strong physical anchor for understanding where the architecture
+  came from.
+next_test: >-
+  Keep the filesystem as the stable ground truth, encode files and directories
+  directly, and add subsystem meaning as an evidence-backed overlay rather than
+  making the architecture abstraction the initial world.

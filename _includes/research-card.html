@@ -1,0 +1,21 @@
+{% assign entry = include.entry %}
+<article class="research-card" data-status="{{ entry.status | escape }}" data-result="{{ entry.result | escape }}" data-search="{{ entry.title | append: ' ' | append: entry.summary | append: ' ' | append: entry.tags | downcase | escape }}">
+  <a class="card-link" href="{{ entry.url | relative_url }}" aria-label="Open {{ entry.title | escape }}"></a>
+  <div class="card-topline">
+    <span class="mono card-id">{{ entry.record_id }}</span>
+    {% include status-pill.html status=entry.status %}
+  </div>
+  <h3>{{ entry.title }}</h3>
+  <p>{{ entry.summary }}</p>
+  <div class="card-meta">
+    <span>{{ entry.started | date: "%d %b" }} to {{ entry.ended | date: "%d %b %Y" }}</span>
+    <span>{{ entry.duration_days }} days</span>
+    <span>{{ entry.research_hours }} research hours{% if entry.research_hours_basis == "estimated" %} · estimated{% endif %}</span>
+    <span>{{ entry.activity_type | capitalize }}</span>
+  </div>
+  {% if entry.tags %}
+  <div class="tag-row" aria-label="Tags">
+    {% for tag in entry.tags limit: 4 %}<span>#{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+</article>

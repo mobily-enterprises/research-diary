@@ -1,0 +1,38 @@
+---
+layout: default
+title: Research archive
+description: Browse all planned, running and completed research entries.
+permalink: /research/
+---
+{% assign entries = site.research | sort: "started" | reverse %}
+<section class="archive-hero shell">
+  <div>
+    <p class="eyebrow">Research records</p>
+    <h1>Research entries</h1>
+  </div>
+  <p>Browse experiments by status or search their titles, summaries and tags. Completed entries remain available whether or not the results supported the hypothesis.</p>
+</section>
+
+<section class="archive-tools shell" aria-label="Research filters">
+  <div class="filter-group" role="group" aria-label="Filter by status">
+    <button class="filter-button active" type="button" data-filter="all">All <span>{{ entries | size }}</span></button>
+    <button class="filter-button" type="button" data-filter="planned">Planned</button>
+    <button class="filter-button" type="button" data-filter="running">Running</button>
+    <button class="filter-button" type="button" data-filter="concluded">Concluded</button>
+  </div>
+  <label class="archive-search">
+    <span class="sr-only">Search experiments</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+    <input id="research-search" type="search" placeholder="Search titles, summaries or tags" autocomplete="off">
+  </label>
+</section>
+
+<section class="archive-results shell">
+  <p id="result-count" class="result-count mono" aria-live="polite">Showing {{ entries | size }} experiments</p>
+  <div id="research-grid" class="research-grid">
+    {% for entry in entries %}{% include research-card.html entry=entry %}{% endfor %}
+  </div>
+  <div id="empty-results" class="empty-results" hidden>
+    <span>∅</span><h2>No matching entries</h2><p>Change the status filter or search term.</p>
+  </div>
+</section>

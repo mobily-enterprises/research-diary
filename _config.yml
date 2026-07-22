@@ -1,0 +1,52 @@
+title: AI Research Diary
+tagline: Technical records of AI research.
+description: >-
+  Dated records of AI research, including background searches, hypotheses,
+  experimental methods, results and conclusions.
+url: "https://mobily-enterprises.github.io"
+baseurl: ""
+lang: en-AU
+timezone: Australia/Perth
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - _internal
+  - _templates
+  - LICENSE
+  - scripts
+  - vendor
+  - node_modules
+
+repository_url: https://github.com/mobily-enterprises/research-diary
+schema_version: "2026-07-22"
+tax_year: "2026-27"

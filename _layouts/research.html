@@ -1,0 +1,108 @@
+---
+layout: default
+---
+<article class="entry-page">
+  <header class="entry-hero shell">
+    <div class="entry-hero-copy">
+      <div class="entry-kicker">
+        <span class="mono">{{ page.record_id }}</span>
+        {% include status-pill.html status=page.status %}
+        {% if page.example %}<span class="sample-pill">Illustrative example</span>{% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      <p class="entry-summary">{{ page.summary }}</p>
+      <div class="entry-tags">
+        {% for tag in page.tags %}<span>#{{ tag }}</span>{% endfor %}
+      </div>
+    </div>
+    <div class="entry-signal" aria-hidden="true">
+      <span class="signal-ring ring-one"></span>
+      <span class="signal-ring ring-two"></span>
+      <span class="signal-ring ring-three"></span>
+      <span class="signal-core"></span>
+      <span class="signal-label mono">{{ page.result | default: page.status }}</span>
+    </div>
+  </header>
+
+  {% if page.example %}
+  <div class="sample-banner shell">
+    <strong>Fictional worked example.</strong>
+    This entry demonstrates the record format. The activity did not occur and no claim is made that it would qualify.
+  </div>
+  {% endif %}
+
+  <div class="entry-facts shell">
+    <div><span>Period covered</span><strong>{{ page.started | date: "%d %b %Y" }} to {{ page.ended | date: "%d %b %Y" }}</strong></div>
+    <div><span>Calendar period</span><strong>{{ page.duration_days }} days</strong></div>
+    <div><span>{% if page.research_hours_basis == "estimated" %}Estimated research time{% else %}Research time{% endif %}</span><strong>{{ page.research_hours }} hours</strong></div>
+    <div><span>Core activity</span><strong>{{ page.core_activity }}</strong></div>
+    <div><span>Tax year</span><strong>FY {{ page.tax_year }}</strong></div>
+    <div><span>Investigators</span><strong>{{ page.investigators | join: ", " }}</strong></div>
+    <div><span>Entry type</span><strong>{{ page.activity_type | capitalize }} R&amp;D</strong></div>
+  </div>
+
+  <div class="entry-grid shell">
+    <aside class="entry-aside">
+      <div class="aside-sticky">
+        <span class="aside-title mono">Entry contents</span>
+        {% if page.activity_type == "supporting" %}
+        <nav aria-label="Entry sections">
+          <a href="#supporting-activity"><span>01</span> Activity</a>
+          <a href="#related-core-activity"><span>02</span> Core relationship</a>
+          <a href="#direct-relationship"><span>03</span> Direct relationship</a>
+          <a href="#work-performed"><span>04</span> Work performed</a>
+          <a href="#production-or-exclusion-assessment"><span>05</span> Assessment</a>
+          <a href="#dominant-purpose-assessment"><span>06</span> Dominant purpose</a>
+          <a href="#records-retained"><span>07</span> Records</a>
+          <a href="#conclusion"><span>08</span> Conclusion</a>
+          <a href="#evidence"><span>09</span> Evidence</a>
+        </nav>
+        {% else %}
+        <nav aria-label="Entry sections">
+          <a href="#research-question"><span>01</span> Question</a>
+          <a href="#existing-knowledge"><span>02</span> Prior knowledge</a>
+          <a href="#technical-uncertainty"><span>03</span> Uncertainty</a>
+          <a href="#hypothesis"><span>04</span> Hypothesis</a>
+          <a href="#experiment-design"><span>05</span> Experiment</a>
+          <a href="#observations"><span>06</span> Observations</a>
+          <a href="#evaluation"><span>07</span> Evaluation</a>
+          <a href="#logical-conclusion"><span>08</span> Conclusion</a>
+          <a href="#evidence"><span>09</span> Evidence</a>
+        </nav>
+        {% endif %}
+        <div class="timestamp-block">
+          <span>{% if page.activity_type == "supporting" %}Purpose recorded{% else %}Hypothesis recorded{% endif %}</span>
+          <strong>{{ page.purpose_recorded | default: page.hypothesis_recorded | date: "%d %b %Y, %H:%M %Z" }}</strong>
+        </div>
+      </div>
+    </aside>
+    <div class="entry-content prose">
+      {{ content }}
+
+      {% if page.evidence %}
+      <section id="evidence" class="evidence-panel">
+        <div class="section-label mono">09 / Evidence</div>
+        <h2>Supporting files</h2>
+        <div class="evidence-list">
+          {% for item in page.evidence %}
+          <a href="{{ item.url | relative_url }}">
+            <span class="evidence-type mono">{{ item.type }}</span>
+            <strong>{{ item.label }}</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if page.next_experiment %}
+      <section class="next-step">
+        <span class="mono">Next experiment</span>
+        <p>{{ page.next_experiment }}</p>
+      </section>
+      {% endif %}
+
+      {% include disclaimer.html %}
+    </div>
+  </div>
+</article>

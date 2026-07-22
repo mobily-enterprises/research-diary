@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% assign project_entries = site.research | where: "project", page.slug | sort: "started" %}
+<article class="project-page">
+  <header class="project-hero shell">
+    <div>
+      <p class="eyebrow">Research project / {{ page.record_id }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="page-intro">{{ page.summary }}</p>
+      <div class="project-chips">
+        {% include status-pill.html status=page.status %}
+        {% if page.example %}<span class="sample-pill">Illustrative example</span>{% endif %}
+        <span>FY {{ page.tax_year }}</span>
+      </div>
+    </div>
+    <div class="project-orbit" aria-hidden="true">
+      <span></span><span></span><span></span><i></i>
+    </div>
+  </header>
+
+  <div class="project-facts shell">
+    <div><span>Project period</span><strong>{{ page.started | date: "%b %Y" }} to {{ page.ended | date: "%b %Y" }}</strong></div>
+    <div><span>Core activities</span><strong>{{ page.core_activities | size }}</strong></div>
+    <div><span>Recorded experiments</span><strong>{{ project_entries | size }}</strong></div>
+    <div><span>Field of research</span><strong>{{ page.field_of_research }}</strong></div>
+  </div>
+
+  <div class="prose shell narrow-shell project-copy">
+    {{ content }}
+  </div>
+
+  <section class="benefit-section shell">
+    <div class="section-heading">
+      <div><p class="eyebrow">Entity considerations</p><h2>Ownership, control and financial risk</h2></div>
+      <p>Project-level facts relevant to determining which entity conducted the R&amp;D activities for its own benefit.</p>
+    </div>
+    <div class="benefit-grid">
+      <article><span class="benefit-number">01</span><h3>Effective ownership</h3><p>{{ page.benefit.effective_ownership }}</p></article>
+      <article><span class="benefit-number">02</span><h3>Direction and control</h3><p>{{ page.benefit.control }}</p></article>
+      <article><span class="benefit-number">03</span><h3>Financial burden</h3><p>{{ page.benefit.financial_burden }}</p></article>
+    </div>
+  </section>
+
+  <section class="project-experiments shell">
+    <div class="section-heading">
+      <div><p class="eyebrow">Research entries</p><h2>Experiments in this project</h2></div>
+      <p>Each entry covers one experiment or material iteration and keeps its own dates and supporting records.</p>
+    </div>
+    <div class="research-grid">
+      {% for entry in project_entries reversed %}{% include research-card.html entry=entry %}{% endfor %}
+    </div>
+  </section>
+</article>

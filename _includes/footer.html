@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="footer-grid shell">
+    <div>
+      <a class="brand footer-brand" href="{{ '/' | relative_url }}">
+        {% include logo.html %}
+        <span>AI Research Diary</span>
+      </a>
+      <p>Technical records of current AI research.</p>
+    </div>
+    <div>
+      <span class="footer-label">Explore</span>
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/method/' | relative_url }}">Method</a>
+    </div>
+    <div>
+      <span class="footer-label">Reference</span>
+      <a href="{{ '/claim-preparation/' | relative_url }}">Claim preparation</a>
+      <a href="{{ site.repository_url }}">Source on GitHub</a>
+    </div>
+  </div>
+  <div class="footer-bottom shell">
+    <span>Schema {{ site.schema_version }}</span>
+    <span>Published with Jekyll on GitHub Pages.</span>
+  </div>
+</footer>

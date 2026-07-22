@@ -1,0 +1,5 @@
+{% assign label = include.status | default: "unknown" %}
+<span class="status-pill status-{{ label | slugify }}">
+  <span class="status-dot" aria-hidden="true"></span>{{ label | replace: "-", " " }}
+</span>
+

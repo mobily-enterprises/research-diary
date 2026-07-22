@@ -1,0 +1,31 @@
+---
+layout: default
+title: Research projects
+description: Projects, core activities and their related research entries.
+permalink: /projects/
+---
+<section class="archive-hero shell">
+  <div>
+    <p class="eyebrow">Project index</p>
+    <h1>Research projects</h1>
+  </div>
+  <p>Each project records its commercial and research objectives, core activities, period of work and relevant facts about ownership, control and financial risk.</p>
+</section>
+
+<section class="project-index shell">
+  {% for project in site.projects %}
+  {% assign count = site.research | where: "project", project.slug | size %}
+  <article class="project-index-card">
+    <a class="card-link" href="{{ project.url | relative_url }}" aria-label="Open {{ project.title | escape }}"></a>
+    <div class="project-card-head"><span class="mono">{{ project.record_id }}</span>{% include status-pill.html status=project.status %}</div>
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.summary }}</p>
+    <div class="project-card-stats">
+      <div><strong>{{ project.core_activities | size }}</strong><span>core activity</span></div>
+      <div><strong>{{ count }}</strong><span>experiments</span></div>
+      <div><strong>{{ project.tax_year }}</strong><span>tax year</span></div>
+    </div>
+    {% if project.example %}<span class="sample-note">Fictional worked example</span>{% endif %}
+  </article>
+  {% endfor %}
+</section>

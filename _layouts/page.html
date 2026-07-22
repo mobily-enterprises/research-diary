@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<section class="page-hero shell narrow-shell">
+  {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+  <h1>{{ page.title }}</h1>
+  {% if page.intro %}<p class="page-intro">{{ page.intro }}</p>{% endif %}
+</section>
+<div class="prose shell narrow-shell">
+  {{ content }}
+</div>
+
