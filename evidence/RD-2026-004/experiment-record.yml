@@ -14,6 +14,8 @@ source_record:
   codex_session_id: 019f8239-a92e-77a3-bb74-316eb0c1dd9a
   repository: mobily-enterprises/vibe64
   package: packages/progsync
+  initial_prototype_commit: 574c5203fd3d0ec86d559aaf920979ab620695cd
+  final_v1_checkpoint_commit: c44e33568240f8ed2ee095fbc9d92f434e6f8471
   note: >-
     The complete session transcript, working repositories and model-run logs are
     retained privately. This public record contains no customer material,
@@ -47,3 +49,10 @@ next_test: >-
   Freeze Program, prompts, model settings and retained inputs; complete two
   independent zero-source self-host generations and require both to pass the
   untouched 73-test oracle without Program changes or implementation repair.
+follow_up:
+  entry_id: RD-2026-007
+  url: /research/rd-2026-007-when-the-compiler-writes-itself/
+  note: >-
+    The follow-up replaced the implementation-shaped v1 graph with a smaller
+    five-file v2 Program architecture. It is a separate experiment and does not
+    alter the result recorded here.

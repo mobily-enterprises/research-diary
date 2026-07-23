@@ -1,0 +1,128 @@
+entry_id: RD-2026-007
+title: ProgSync v2 definitive clean-generation ledger
+archive_date: 2026-07-23
+source:
+  report_archive_path: progsync-v2-generated-2026-07-23
+  current_local_repository: progsync
+  original_temporary_repository: progsync-v2-definitive.zOfyVk
+  source_report: generation_report.txt
+  archive_commit: 89952dfccd2feedc71aaa7cc40bdee8daf90fb37
+  note: >-
+    This is the public structured extract of the final report preserved in the
+    complete experimental Git repository. The full repository, original report,
+    model records and private accepted-state commits are retained separately.
+question: >-
+  Could a deliberately small, readable Program corpus generate a complete,
+  working ProgSync implementation without seeing or copying the mature
+  JavaScript implementation?
+model:
+  name: gpt-5.6-sol
+  reasoning_effort: xhigh
+  invocation: separate fresh atomic invocation for each production Program module
+starting_point:
+  commit: 2ed3e80cb9d5def4fb846085dec66216b4049d09
+  subject: Retained Program inputs
+  retained_files: 13
+  program_files: 5
+  production_program_modules: 4
+  shared_type_registries: 1
+  former_production_source_files: 0
+  tests: 0
+  retained_inputs:
+    - five Program files
+    - five translator and author prompts
+    - schemas/synchronizer-result.schema.json
+    - package.json
+    - README.md
+generation:
+  pure_generation_commit: 9ae1d92a72492ec768f48305228dd135f1c65ca0
+  subject: Generate production implementation from Program
+  candidates_accepted_first_attempt: 4
+  candidates_total: 4
+  approximate_wall_clock:
+    command_seconds: 58
+    package_descriptor_seconds: 68
+    cli: 4 minutes 29 seconds
+    root_library: 37 minutes 30 seconds
+  files_added: 27
+  lines_added: 5907
+  production_files: 23
+  private_root_auxiliaries: 19
+  deterministic_projection_files: 4
+  source_frozen_before_oracle: true
+oracle:
+  public_boundaries:
+    - package root
+    - public ./cli subpath
+    - executable
+    - external package descriptor
+  private_helper_imports: 0
+  program_test_modules: 0
+  first_result:
+    passed: 44
+    total: 53
+  final_result:
+    passed: 55
+    total: 55
+reconciliation:
+  first_commit: 48e29027d03edefff257aac886de2f99bfec1474
+  first_subject: Reconcile generated implementation with verified Program
+  forwarded_provider_commit: 7749eb82bd67ce5c16ccfa2bb7d7c75cd6b175d6
+  forwarded_provider_subject: Validate forwarded project providers
+  explicit_baseline_commit: 46c903601c97075ca05f866aa5493d428d14fa89
+  explicit_baseline_subject: Honor explicit Git synchronization baselines
+  production_files_unchanged: 18
+  production_files_changed: 5
+  production_lines_added: 343
+  production_lines_removed: 106
+  changed_private_files:
+    - path: src/index/candidate.js
+      added: 1
+      removed: 0
+    - path: src/index/context.js
+      added: 31
+      removed: 15
+    - path: src/index/source.js
+      added: 94
+      removed: 37
+    - path: src/index/sync.js
+      added: 77
+      removed: 29
+    - path: src/index/validate.js
+      added: 140
+      removed: 25
+  public_implementations_changed: 0
+  generated_javascript_hand_patches: 0
+handoff:
+  codex_available: false
+  explicit_head_baseline_changed_tracked_files: false
+  ordinary_checkpoint_pass_changed_tracked_files: false
+  production_modules_returning_no_change: 4
+  production_modules_total: 4
+  before_after_hashes_identical: true
+final_verification:
+  generated_public_oracle:
+    passed: 55
+    total: 55
+  mature_public_oracle:
+    passed: 55
+    total: 55
+  program_check:
+    files: 5
+    diagnostics: 0
+  complete_vibe64:
+    server_tests_passed: 1433
+    client_tests_passed: 633
+    production_build: passed
+    workspace_package_contracts_passed: 19
+    project_doctor: passed
+    package_dry_run_files: 48
+vibe64_milestone:
+  commit: 0ab44e2f2b277fce8f9369b10e4f80777a5ad6a7
+  subject: "progsync: complete v2 self-hosting milestone"
+  url: https://github.com/mobily-enterprises/vibe64/commit/0ab44e2f2b277fce8f9369b10e4f80777a5ad6a7
+conclusion: >-
+  The reduced Program architecture generated a substantial working compiler,
+  but one sufficient Program still produced a clear implementation defect.
+  Independent verification and minimal reconciliation made the verified
+  managed implementation durable source rather than disposable object code.

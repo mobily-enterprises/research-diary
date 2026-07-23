@@ -33,6 +33,9 @@ evidence:
   - label: Experiment record
     type: YAML
     url: /evidence/RD-2026-006/experiment-record.yml
+  - label: File City development ledger
+    type: YAML
+    url: /evidence/RD-2026-006/development-ledger.yml
   - label: Results by stage
     type: CSV
     url: /evidence/RD-2026-006/results.csv
@@ -308,8 +311,10 @@ page rather than assuming that a refreshed-looking screen contained new source.
   for its descendants. Unrelated slabs were later greyed as well.
 - Tried a colour family per directory depth. The systematic description failed
   completely in the live city and was undone.
-- Committed the first coherent File City implementation as
-  [`218ae630` — Add session File City system browser](https://github.com/mobily-enterprises/vibe64/commit/218ae6305c380746f5f8da363acb17fac946b20e).
+- Committed the first coherent File City implementation at `218ae630`. The
+  completed experimental implementation line is retained in
+  [`df7fe04` — Add immersive File City editing and recovery
+  UI](https://github.com/mobily-enterprises/vibe64/commit/df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4).
 
 ### 12–13 July 2026 — putting architecture back
 
@@ -331,6 +336,11 @@ page rather than assuming that a refreshed-looking screen contained new source.
   renderer consumes those kinds; the JSKIT adapter discovers them through JSKIT
   mechanisms. A future framework can use the existing kinds or require an
   explicit model extension.
+- At revision `035`, the extracted model contained 2,392 imports, 71 injection
+  connections and 83 declarations. The build, lint, 538 client tests and 11
+  focused server tests passed. The wider server run recorded 1,248 passes and
+  eight failures in unrelated setup, authentication and seed tests; it was not
+  represented as a complete green repository gate.
 - Expanded imported-file details to show the actual exports used rather than
   stopping at file paths.
 - Observed that exact relationships to shared helpers produced a dense web when
@@ -348,8 +358,10 @@ page rather than assuming that a refreshed-looking screen contained new source.
 - Determined that the planes needed large vertical gaps. A small offset looked
   like a rendering adjustment; a categorical layer needed enough void that the
   tallest building below remained clear of the plane above.
-- Ended the recorded period while the five-level selection and cumulative plane
-  spacing were still being revised.
+- Implemented five cumulative levels, level-local subsystem circles and camera
+  pivots in follow-on commits. The mechanism landed within the recorded period,
+  but its usability had not received the same completed live evaluation as the
+  earlier city and connection experiments.
 
 ## Observations
 
@@ -492,11 +504,12 @@ slab. The layers needed categorical separation: wide empty vertical space, a
 new campus floor at each occupied level, and spacing derived cumulatively so a
 lower layer could not collide with the one above it.
 
-This was an important refinement and an unfinished one. The recorded
-conversation ended after specifying five possible levels, direct level
-selection, fragment-aware subsystem selection and gaps based on the tallest
-content below. The end state should not be backfilled into the experiment as if
-it had already been evaluated.
+This was an important refinement with an important evidence boundary. The
+original conversation ended after specifying five possible levels, direct
+level selection, fragment-aware subsystem selection and gaps based on the
+tallest content below. Follow-on commits implemented the levels, local circles
+and layer-aware camera pivots. Implementation is therefore evidenced; successful
+human interpretation is not.
 
 ## Evaluation
 
@@ -514,6 +527,12 @@ tests and 6 System route/service tests**. The relevant build/check command also
 completed successfully. These checks established implementation behaviour; they
 did not measure whether a new user understood the city.
 
+The retained feature history contains 17 focused File City commits from the
+initial implementation through `df7fe04`. At that checkpoint, the evidence
+boundary comprised 37 package files and six focused test files, with 16,793
+inserted lines across those 43 files. This quantifies the implemented
+experimental system, not its usability.
+
 The broad hypothesis remains inconclusive for three reasons.
 
 First, the responsiveness threshold was subjective. The same evaluator reported
@@ -524,8 +543,8 @@ inventor cannot establish comprehension by somebody approaching the system for
 the first time.
 
 Third, the architectural overlay was still changing. Connection evidence and
-bundling had become much more honest, while the five vertical architecture
-levels had not completed evaluation within the recorded period.
+bundling had become much more honest, while the implemented five-level
+architecture had not completed evaluation within the recorded period.
 
 The trial nevertheless falsified and refined several mechanisms:
 
@@ -540,7 +559,7 @@ The trial nevertheless falsified and refined several mechanisms:
 | One aggregate line per subsystem pair | Rejected when ownership is physically scattered |
 | Bundles at proven ownership fragments with last-mile expansion | Viable in the prototype |
 | Small manual height offsets | Rejected as visually ambiguous |
-| Discrete architectural planes | Promising but incomplete at period end |
+| Discrete architectural planes | Implemented; usability evaluation incomplete at period end |
 
 ### Conjectures produced by the work
 

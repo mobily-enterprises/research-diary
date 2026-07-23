@@ -1,0 +1,109 @@
+entry_id: RD-2026-006
+title: File City experimental development ledger
+repository: mobily-enterprises/vibe64
+source:
+  primary_codex_session_id: 019f4fcf-b843-7222-b270-c23e8ec3a77a
+  worktree_branch: system-world-v1
+  note: >-
+    The primary conversation ended while five-level strata were being
+    specified. Follow-on commits within the recorded period implemented the
+    strata; implementation and successful usability evaluation remain separate
+    claims.
+scope:
+  from_parent_of: 218ae6305c380746f5f8da363acb17fac946b20e
+  through: df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4
+  final_commit_url: https://github.com/mobily-enterprises/vibe64/commit/df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4
+  focused_commits: 17
+  package_files: 37
+  focused_test_files: 6
+  total_files: 43
+  lines_added: 16793
+  lines_removed: 0
+  note: >-
+    The path-limited diff covers the vibe64-system-graph package and its six
+    focused client, server and end-to-end test files. The figures quantify
+    implementation scope, not usability or research success.
+commits:
+  - commit: 218ae6305c380746f5f8da363acb17fac946b20e
+    subject: Add session File City system browser
+  - commit: aa50980bea16cca9ccad5157ccd3be9e4ae6050b
+    subject: Label and spread out File City buildings
+  - commit: 707d7872c2a5c29aa923f217527a5bc6005fd59c
+    subject: Refine File City navigation and selection
+  - commit: c99235e016ebf7d43032098676eaac147380b08b
+    subject: Clarify File City directory terrain
+  - commit: 4e855180c145eaa9711f68354b911d914a913e2f
+    subject: Add semantic subsystem sky to File City
+  - commit: 012431a7bb0bc2155112f281da2daecb01734304
+    subject: Show optional subsystem dependency context
+  - commit: e2d7a92b490cc72b7de5e4cc01a4c41832be6156
+    subject: Model system connection evidence
+  - commit: 344410dec59b285ae068dcc9601689b3b83e00d4
+    subject: Visualize bundled subsystem connections
+  - commit: fea0ff4e239c319669785ecb827c07b8fbc99c59
+    subject: Add subsystem physical strata
+  - commit: aa27be905b70f39f64cc6068d8295468dab8d9a9
+    subject: Add five cumulative subsystem strata
+  - commit: 778a3b8f516d282b7cc25b150cc1bbffeafad4db
+    subject: Add level-local subsystem circles
+  - commit: da9982e98c87d2fc89ee2abdcb77f11abf7774aa
+    subject: Center orbit pivots on active city layers
+  - commit: 037746dc2b5582b1b9b92968feddd547609e42f5
+    subject: Add cursor-directed city flight
+  - commit: 96b66418235f33301c99790ac2b0603f39a14324
+    subject: Add File City view history navigation
+  - commit: 214c75aa0f2527e43feeab06964425b9f7b4d927
+    subject: Add adapter-defined semantic File City topology
+  - commit: 138757c879ca20b9f1a82784f7ef7737f1b86373
+    subject: Improve File City rendering for filesystem routes
+  - commit: df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4
+    subject: Add immersive File City editing and recovery UI
+subject:
+  source_files: 600
+  packages: 17
+rendering:
+  initial_result: sluggish
+  accepted_mechanism:
+    - two instanced skyline draws
+    - merged directory geometry
+    - capped pixel density
+    - demand rendering
+  observed_result: subjectively described as snappy
+  retained_frame_time_trace: false
+connection_model_at_revision_035:
+  imports: 2392
+  injections: 71
+  declarations: 83
+  canonical_kinds:
+    - import
+    - injection
+    - declaration
+  unresolved_endpoints_invented: false
+verification:
+  revision_035:
+    build: passed
+    lint: passed
+    client_tests_passed: 538
+    focused_server_tests_passed: 11
+    wider_server_tests_passed: 1248
+    wider_server_tests_failed_unrelated: 8
+  final_strata_iteration:
+    client_layout_tests_passed: 9
+    system_route_and_service_tests_passed: 6
+    build_check: passed
+architectural_strata:
+  five_levels_implemented: true
+  level_local_circles_implemented: true
+  camera_pivots_implemented: true
+  usability_evaluation_complete: false
+result:
+  broad_hypothesis: inconclusive
+  narrower_supported_findings:
+    - The complete source set can be rendered through instanced and merged geometry.
+    - Directory terrain can preserve stable physical geography.
+    - Exact and declaration-only connections can remain visibly distinct.
+    - Dense relationships can be bundled at proven physical fragments and expanded to exact last-mile evidence.
+  still_unproven:
+    - objective frame-time and interaction targets
+    - comparative comprehension benefit
+    - usability of architectural strata

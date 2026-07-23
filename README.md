@@ -2,17 +2,24 @@
 
 A Jekyll site for publishing dated AI research records. It separates project information, core activities and individual experiments. Git history records when hypotheses, methods, results and conclusions were added.
 
-All records included with the site are fictional worked examples. The activities did not occur, and the examples do not represent a view that the activities would qualify for the Australian R&amp;D Tax Incentive.
+Records marked as illustrative examples are fictional and say so explicitly.
+Published research records describe work performed by Mobily Enterprises. Their
+publication does not establish that an activity or expenditure qualifies for
+the Australian R&amp;D Tax Incentive.
 
 ## Run locally
 
 ```bash
 bundle install
 bundle exec ruby scripts/validate_entries.rb
-bundle exec jekyll serve --livereload
+bundle exec jekyll build
+python3 -m http.server 4000 --directory _site
 ```
 
 Open <http://localhost:4000>.
+
+This serves the completed static build. It does not watch or regenerate source
+files.
 
 ## Authoring instructions
 
@@ -28,7 +35,7 @@ See [`_internal/ADDING_ENTRIES.md`](_internal/ADDING_ENTRIES.md). This guide and
 ## Add an experiment
 
 ```bash
-cp _templates/research-entry.md _research/RD-2026-004-short-question.md
+cp _templates/research-entry.md _research/RD-2026-008-short-question.md
 ```
 
 Complete the prior-knowledge search, uncertainty, hypothesis, protocol and evaluation plan before running the experiment. Commit the plan, then add observations, evidence, evaluation and conclusions as the work occurs.

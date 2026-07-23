@@ -33,6 +33,9 @@ evidence:
   - label: Experiment record
     type: YAML
     url: /evidence/RD-2026-005/experiment-record.yml
+  - label: Architecture-first pivot ledger
+    type: YAML
+    url: /evidence/RD-2026-005/architecture-pivot-ledger.yml
   - label: Recorded decisions
     type: CSV
     url: /evidence/RD-2026-005/results.csv
@@ -387,6 +390,13 @@ model and a 3D renderer could be integrated into Vibe64.
 It did not meet the primary human threshold. The inventor, evaluating the live
 world, could not use its opening abstraction as the natural way into the
 codebase. The model required a stronger visual and evidentiary anchor.
+
+The timing makes the result unusually clear. The live System preview was handed
+to the evaluator at 08:27 AWST. At 08:35:27—about eight minutes later—the
+opening representation was rejected as “too abstract” and the filesystem-first
+city was proposed. This was a rapid inventor-led falsification of the opening
+experience, not a controlled usability study or a claim that every
+architecture-first interface fails.
 
 No controlled participant study was run, so this does not establish that every
 architecture-first view will fail. It does establish that the tested

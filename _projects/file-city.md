@@ -90,7 +90,8 @@ they do not test a technical uncertainty.
 File City exists as a working Vibe64 prototype and has been merged into the
 main codebase. The work established several useful mechanisms, including
 repository-scale instanced rendering, evidence-typed connections and
-subsystem-aware bundling. It did not establish that the world improves human
-understanding compared with a conventional tree, map or source browser. That
-requires repeatable performance measurements and controlled comprehension
-tasks rather than the inventor's own live evaluation.
+subsystem-aware bundling. Five discrete architectural levels were implemented,
+but their usability was not established. The project did not prove that the
+world improves human understanding compared with a conventional tree, map or
+source browser. That requires repeatable performance measurements and
+controlled comprehension tasks rather than the inventor's own live evaluation.

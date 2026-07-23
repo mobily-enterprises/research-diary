@@ -11,7 +11,7 @@ Confirm which project and core activity the work belongs to. Create the project 
 Copy the core experiment template and assign the next unused identifier:
 
 ```bash
-cp _templates/research-entry.md _research/RD-2026-007-short-question.md
+cp _templates/research-entry.md _research/RD-2026-008-short-question.md
 ```
 
 Complete these sections before running the experiment:
@@ -90,7 +90,11 @@ Use the same project, core-activity and entry IDs in time, payroll, accounting, 
 
 ```bash
 bundle exec ruby scripts/validate_entries.rb
-bundle exec jekyll serve --livereload
+bundle exec jekyll build
+python3 -m http.server 4000 --directory _site
 ```
 
-The validator checks file structure, identifiers, dates, project relationships and local evidence links. It does not determine whether the recorded facts are true or whether an activity or expenditure is eligible.
+The validator checks file structure, identifiers, dates, project relationships
+and local evidence links. It does not determine whether the recorded facts are
+true or whether an activity or expenditure is eligible. The preview serves only
+the completed static build; it does not watch or regenerate source files.

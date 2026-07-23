@@ -59,4 +59,14 @@ The work covers the Program format, bounded translation context, shared types, d
 
 ## Current position
 
-The prototype is suitable for controlled, reviewable integration work. It has not yet established that Program can replace conventional source as Vibe64's dependable authoring surface. That decision depends on repeated clean reconstruction, stronger deterministic checks and direct testing with the people expected to read and edit Program.
+The v2 experiment has demonstrated one complete source-free reconstruction from
+four production Program modules and one shared type registry. The mature and
+independently generated ProgSync implementations passed the same 55-case public
+oracle, and the generated compiler converged with Codex unavailable.
+
+The experiment also found a clear synthesis defect despite sufficient Program.
+The verified managed implementation must therefore remain durable source
+alongside Program, reconciled against their last accepted pair rather than
+treated as disposable compiler output. Repeated clean reconstruction,
+generality beyond ProgSync and direct testing with the people expected to read
+and edit Program remain unproven.

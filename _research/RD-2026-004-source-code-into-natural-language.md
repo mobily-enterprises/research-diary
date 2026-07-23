@@ -33,6 +33,9 @@ evidence:
   - label: Experiment record
     type: YAML
     url: /evidence/RD-2026-004/experiment-record.yml
+  - label: V1 development ledger
+    type: YAML
+    url: /evidence/RD-2026-004/development-ledger.yml
   - label: Recorded results by stage
     type: CSV
     url: /evidence/RD-2026-004/results.csv
@@ -303,6 +306,12 @@ The model and prompt versions, timestamps, repositories, commands and detailed r
 - Started a new clean generation from the improved Program and compiler. It initially reached 39/73, then 59/73 after one explicit completion dependency, 66/73 after a narrower call-group rule, and 73/73 after further bounded Program/compiler repairs.
 - Began a third frozen clean generation intended to distinguish reproducibility from a successfully repaired tree. Five of 33 targets had completed when the recorded period ended; no final behavioural result was available.
 
+The versioned v1 implementation and research material ran from the initial
+prototype at `574c5203` to the hardened checkpoint at `c44e3356`: nine focused
+commits affecting 46 ProgSync and research-record files, with 13,440 inserted
+and 1,316 removed lines. These figures establish the retained development
+boundary; they are not a measure of research success.
+
 ## Observations
 
 ### We were not writing documentation
@@ -516,6 +525,13 @@ We know enough to integrate it.
 We do not yet know whether it will work.
 
 That is the honest end of the first experiment—and a much better place to be than where we started four days earlier.
+
+The later [v2 self-hosting
+experiment](/research/rd-2026-007-when-the-compiler-writes-itself/) replaced
+this implementation-shaped Program graph with five deliberately smaller
+Program files and obtained a stronger result. It is recorded separately
+because it tested a changed architecture and hypothesis; it does not
+retroactively turn this frozen v1 experiment into a successful clean repeat.
 
 ## Supporting activities
 

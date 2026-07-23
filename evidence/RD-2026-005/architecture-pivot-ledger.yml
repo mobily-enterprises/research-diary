@@ -1,0 +1,49 @@
+entry_id: RD-2026-005
+title: Architecture-first truth-spike and pivot ledger
+source:
+  codex_session_id: 019f4fcf-b843-7222-b270-c23e8ec3a77a
+  repository: mobily-enterprises/vibe64
+  worktree: system-world-v1
+  note: >-
+    The rejected architecture-first world was evaluated before the later
+    filesystem-first File City was committed. No later city commit is presented
+    as evidence that the rejected opening representation succeeded.
+timeline:
+  hypothesis_recorded: "2026-07-11 14:21 +0800"
+  preview_handed_to_evaluator: "2026-07-12 08:27:03 +0800"
+  representation_rejected: "2026-07-12 08:35:27 +0800"
+  elapsed_live_evaluation: approximately 8 minutes
+subject:
+  repository: Vibe64
+  source_files_classified: 600
+  packages: 17
+representation:
+  opening:
+    - client and server realms
+    - subsystem territories
+    - evidence-backed connectors
+    - current-state System view
+    - Files/System navigation
+  evidence_origins:
+    - declared
+    - mechanically derived
+    - observed
+    - inferred
+decision:
+  result: rejected
+  evaluator: product inventor
+  exact_short_reason: "It's too abstract."
+  mechanism_rejected: >-
+    Requiring the user to accept an architectural interpretation before seeing
+    the physical repository which supported it.
+  retained_findings:
+    - Keep architectural claims traceable to technical evidence.
+    - Preserve unsupported or ambiguous relationships as unknown.
+    - Keep framework adapters inside Vibe64 rather than requiring frameworks to implement a Vibe64 feature.
+    - Use the filesystem as stable opening geography and add architecture as a lens.
+next_experiment:
+  entry_id: RD-2026-006
+  url: /research/rd-2026-006-source-code-as-3d-city/
+limitation: >-
+  This was a rapid inventor-led falsification of the opening experience, not a
+  comparative usability study with independent participants.

@@ -14,7 +14,9 @@ source_record:
   codex_session_id: 019f4fcf-b843-7222-b270-c23e8ec3a77a
   repository: mobily-enterprises/vibe64
   worktree_branch: system-world-v1
-  primary_commit: 218ae6305c380746f5f8da363acb17fac946b20e
+  initial_commit: 218ae6305c380746f5f8da363acb17fac946b20e
+  final_experimental_commit: df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4
+  final_experimental_commit_url: https://github.com/mobily-enterprises/vibe64/commit/df7fe04a66a92fdf5e02f2ccc82c035f0dca7fc4
   note: >-
     The complete live-evaluation transcript, renderer revisions, screenshots and
     intermediate worktree state are retained privately. The entry records the
@@ -38,13 +40,40 @@ controls:
   - Canonical file and directory positions remained deterministic.
   - Relationship claims retained their evidence kind and exact endpoints where known.
   - Visual changes were evaluated in one live browser by the product inventor.
+measured_outcomes:
+  subject_source_files: 600
+  subject_packages: 17
+  revision_035_connections:
+    imports: 2392
+    injections: 71
+    declarations: 83
+  revision_035_verification:
+    build: passed
+    lint: passed
+    client_tests_passed: 538
+    focused_server_tests_passed: 11
+    wider_server_tests_passed: 1248
+    wider_server_tests_failed_unrelated: 8
+  final_focused_verification:
+    client_layout_tests_passed: 9
+    system_route_and_service_tests_passed: 6
+    build_check: passed
+  retained_feature_history:
+    focused_commits: 17
+    package_files: 37
+    focused_test_files: 6
+    total_files: 43
+    lines_added: 16793
+  architectural_levels:
+    implemented: true
+    usability_evaluation_complete: false
 result: inconclusive
 reason: >-
   The prototype became subjectively responsive and the evidence model supported
   exact imports, declared-only dependencies and subsystem bundles. However, no
   frame-time target or comparative comprehension protocol had been fixed in
-  advance, and the recorded period ended while architectural layers were still
-  being revised.
+  advance, and the implemented architectural layers had not completed live
+  usability evaluation within the recorded period.
 next_test: >-
   Freeze a representative repository snapshot and define a repeatable trial:
   measured frame-time and interaction latency at several file counts, followed

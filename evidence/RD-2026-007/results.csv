@@ -1,0 +1,10 @@
+stage,program_files,production_targets,production_files,projection_files,oracle_passed,oracle_total,manual_generated_source_edits,observation
+Architecture reset,5,4,0,0,0,0,0,"The former 34-document graph was replaced by four production modules and one shared type registry"
+Definitive source-free generation,5,4,23,4,0,0,0,"All four production candidates were accepted on their first attempt without former source or tests; the pure-generation commit added 5907 lines across 27 files"
+First withheld public oracle,5,4,23,4,44,53,0,"Failures reduced to four observable implementation errors and one over-specific wording assertion"
+Program-driven correction,5,4,23,4,52,53,0,"The root implementation was reconciled through Program and compiler guidance rather than hand repair"
+Dry-run correction,5,4,23,4,53,53,0,"The generated package reached the complete then-current oracle"
+Forwarded-export handoff,5,4,23,4,54,54,0,"A no-Codex handoff exposed failure to follow a public re-export through an owned auxiliary tree"
+Explicit-base precedence handoff,5,4,23,4,55,55,0,"A sufficient Program still produced a two-condition implementation defect; incremental reconciliation preserved the remaining generated code"
+Final generated verification,5,4,23,4,55,55,0,"18 of 23 production files were unchanged; five private files accounted for all +343/-106 production-line reconciliation; all four modules returned NO_CHANGE without Codex"
+Complete Vibe64 verification,5,4,23,4,55,55,0,"1433 server tests and 633 client tests passed, followed by the production build, 19 workspace package contracts and project doctor"

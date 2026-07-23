@@ -22,6 +22,12 @@ source_record:
     The complete conversation, intermediate source and screenshots are retained
     privately. This public record omits machine paths, customer material,
     credentials and private remuneration information.
+live_evaluation:
+  preview_handed_to_evaluator: "2026-07-12 08:27:03 +0800"
+  representation_rejected: "2026-07-12 08:35:27 +0800"
+  elapsed: approximately 8 minutes
+  evaluator: product inventor
+  decision: "Reject the architecture-first opening as too abstract."
 hypothesis:
   recorded_at: "2026-07-11 14:21 +0800"
   statement: >-

@@ -1,0 +1,64 @@
+entry_id: RD-2026-004
+title: ProgSync v1 development ledger
+repository: mobily-enterprises/vibe64
+scope:
+  from_parent_of: 574c5203fd3d0ec86d559aaf920979ab620695cd
+  through: c44e33568240f8ed2ee095fbc9d92f434e6f8471
+  paths:
+    - packages/progsync
+    - progsync-self-hosting-findings.md
+    - software_development_revolution.md
+    - git-based-changes-plan.md
+  commits: 9
+  files_changed: 46
+  lines_added: 13440
+  lines_removed: 1316
+  note: >-
+    These figures describe the retained v1 implementation and research-record
+    boundary. They do not measure eligible activity, technical success or
+    expenditure.
+commits:
+  - commit: 574c5203fd3d0ec86d559aaf920979ab620695cd
+    subject: "feat: add ProgSync prototype"
+  - commit: 1fa964d953ebb3df7ef9cfd4f9146a680e2aec61
+    subject: "fix: harden ProgSync synchronization"
+  - commit: 593774b0b36f4f3c0c1dbfe1e3a85922d55a9def
+    subject: "fix: keep async mechanics out of Program"
+  - commit: 4de8c550dbc6c326fe828a777c1a2ed40de43cd9
+    subject: "feat: create shared types during Program import"
+  - commit: d64b8882d267dfbf014d75f8446a98f07236e653
+    subject: Simplify ProgSync shared type references
+  - commit: fccc5e1f4ae7213d3cf450ce0e89bd5363355d0c
+    subject: Close ProgSync shared type dependencies
+  - commit: 87c2961bde040f0ab786c60a10b23d5dcf533fd2
+    subject: Add strict Program authoring workflow
+  - commit: edc9450d1b0b58b07a23ca83eeb2d8c33d8a872c
+    subject: Harden JavaScript decimal rounding translation
+  - commit: c44e33568240f8ed2ee095fbc9d92f434e6f8471
+    subject: "progsync: checkpoint hardened synchronization prototype"
+experimental_results:
+  reading_garden:
+    program_documents: 22
+    generated_targets: 21
+    behavioural_groups_passed: 15
+    behavioural_groups_total: 15
+    repeated_sync_seconds: 4.6
+    repeated_sync_model_calls: 0
+  self_host_a:
+    clean_initial: 14/73
+    repaired: 73/73
+  self_host_b:
+    clean_initial: 39/73
+    after_completion_rule: 59/73
+    after_call_group_rule: 66/73
+    repaired: 73/73
+  frozen_self_host_c:
+    targets_complete_at_record_close: 5
+    targets_total: 33
+    final_result_available: false
+follow_up:
+  entry_id: RD-2026-007
+  url: /research/rd-2026-007-when-the-compiler-writes-itself/
+  changed_design: >-
+    V2 stopped mirroring the former implementation graph and tested four
+    production Program modules plus one shared type registry.
