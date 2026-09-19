@@ -35,7 +35,7 @@ See [`_internal/ADDING_ENTRIES.md`](_internal/ADDING_ENTRIES.md). This guide and
 ## Add an experiment
 
 ```bash
-cp _templates/research-entry.md _research/RD-2026-008-short-question.md
+cp _templates/research-entry.md _research/RD-2026-009-short-question.md
 ```
 
 Complete the prior-knowledge search, uncertainty, hypothesis, protocol and evaluation plan before running the experiment. Commit the plan, then add observations, evidence, evaluation and conclusions as the work occurs.

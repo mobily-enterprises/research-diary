@@ -71,8 +71,13 @@ layout: default
         </nav>
         {% endif %}
         <div class="timestamp-block">
+          {% if page.record_basis == "retrospective" %}
+          <span>Retrospective formulation</span>
+          <strong>{{ page.purpose_recorded | default: page.hypothesis_recorded | date: "%d %b %Y" }}</strong>
+          {% else %}
           <span>{% if page.activity_type == "supporting" %}Purpose recorded{% else %}Hypothesis recorded{% endif %}</span>
           <strong>{{ page.purpose_recorded | default: page.hypothesis_recorded | date: "%d %b %Y, %H:%M %Z" }}</strong>
+          {% endif %}
         </div>
       </div>
     </aside>

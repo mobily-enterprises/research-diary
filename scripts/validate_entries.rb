@@ -119,7 +119,16 @@ Dir.glob(File.join(ENTRY_DIR, "*.{md,markdown}"), File::FNM_EXTGLOB).sort.each d
     errors << "#{label}: ended is not a valid date" unless ended
     errors << "#{label}: #{record_field} is not a valid date/time" unless record_date
     errors << "#{label}: ended precedes started" if started && ended && ended < started
-    if started && record_date && record_date > started
+    if data["record_basis"] == "retrospective"
+      recorded_on = parse_date(data["recorded_on"])
+      errors << "#{label}: retrospective records require a valid recorded_on date" unless recorded_on
+      if recorded_on && ended && recorded_on < ended
+        errors << "#{label}: retrospective recorded_on must not precede the activity end date"
+      end
+      if recorded_on && record_date && record_date > recorded_on
+        errors << "#{label}: #{record_field} must not follow recorded_on"
+      end
+    elsif started && record_date && record_date > started
       errors << "#{label}: #{record_field} must be recorded no later than the activity start date"
     end
 

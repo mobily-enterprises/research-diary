@@ -1,0 +1,163 @@
+entry_id: RD-2026-008
+project_id: PRJ-2026-004
+core_activity: CA-01
+title: Does the same agent loop produce the same investigation?
+timezone: Australia/Perth
+period:
+  started: '2026-09-19'
+  ended: '2026-09-20'
+record_basis: retrospective
+recorded_on: '2026-09-20'
+research_effort:
+  hours: 12
+  basis: estimated
+  note: Aggregate supplied by the investigator for this activity. It is not calculated
+    from model wall-clock durations and is not independently reconciled to private
+    time or expenditure records here.
+cohort:
+  scope: Selected non-frontier coding-model candidates
+  frontier_models_in_candidate_comparison: false
+  candidate_runs: 3
+  repeated_runs_per_candidate: false
+  frontier_reference_note: A prior Astra-assisted investigation supplied source- and
+    probe-backed reference findings. It was not rerun as a matched candidate; no frontier-versus-non-frontier
+    performance claim is supported.
+question: How consistently do agents sharing a repository and tool-loop design select
+  evidence that discovers and substantiates important defects?
+hypothesis:
+  formulated_on: '2026-09-20'
+  preregistered: false
+  statement: If common tooling, repository state and written guidance suffice for
+    interchangeable review, important reference defects and their supporting evidence
+    should be recovered consistently.
+  advance_numeric_threshold:
+  note: The replay request was contemporaneous; this hypothesis and finding rubric
+    were consolidated retrospectively.
+source_state:
+  public_editor_commit: 9fd9abc0b62313251bfae32be6b71ed8704b839c
+  companion_checkout_commit: 5e777eae09cefe9b57c578c64592de47081314ae
+  public_implementation_commits: 9
+  companion_pointer_commits: 5
+  preexisting_edits: Identity-display and identity-logging changes preserved; comparison-copy
+    Markdown paths changed to isolate the checkouts.
+  isolation: Independent checkouts; candidate instructions prohibited consulting repaired
+    originals, later remote history or other agents repair reports.
+model_runs:
+- candidate: DeepSeek
+  model: deepseek-flash
+  reasoning_effort: high
+  cli_version: 0.133.3
+  session_id: 01a0ba1e-8781-7c50-aff8-c11e10e3d6e1
+  private_source_reference: agent-session:01a0ba1e-8781-7c50-aff8-c11e10e3d6e1
+  source_filename: rollout-2026-09-19T22-42-38-01a0ba1e-8781-7c50-aff8-c11e10e3d6e1.jsonl
+  sha256: d7af80a1018bd299bf4d4c3d8e4cd8d58d52f32884f6bca8e235e0aac5799111
+  hash_scope: Complete retained JSONL file at diary compilation
+  source_bytes: 536970
+  jsonl_records: 342
+  first_record_utc: '2026-09-19T14:42:47.802Z'
+  last_record_utc: '2026-09-19T14:49:24.442Z'
+  tool_calls: 96
+  base_instruction_metadata: nonempty
+  note: Metadata does not prove the contents of the actual provider request.
+- candidate: GLM
+  model: glm-5.3
+  reasoning_effort: high
+  cli_version: 0.133.3
+  session_id: 01a0ba3f-0a97-7931-b192-d8d273015461
+  private_source_reference: agent-session:01a0ba3f-0a97-7931-b192-d8d273015461
+  source_filename: rollout-2026-09-19T23-18-08-01a0ba3f-0a97-7931-b192-d8d273015461.jsonl
+  sha256: 5506694e2489e15f1e84dac96ff9415561b3a5de257eca631966b2462ac833e3
+  hash_scope: Complete retained JSONL file at diary compilation
+  source_bytes: 502107
+  jsonl_records: 347
+  first_record_utc: '2026-09-19T15:18:10.707Z'
+  last_record_utc: '2026-09-19T15:49:06.668Z'
+  tool_calls: 77
+  base_instruction_metadata: empty
+  note: Metadata does not prove the contents of the actual provider request.
+- candidate: Grok
+  model: grok-4.6
+  reasoning_effort: high
+  cli_version: 0.133.3
+  session_id: 01a0ba83-d797-7392-896a-95bdc36ecd25
+  private_source_reference: agent-session:01a0ba83-d797-7392-896a-95bdc36ecd25
+  source_filename: rollout-2026-09-20T00-33-17-01a0ba83-d797-7392-896a-95bdc36ecd25.jsonl
+  sha256: d45257695532ac96522475956e9d09deffa1271be6da76b19e336ad51dca30de
+  hash_scope: Complete retained JSONL file at diary compilation
+  source_bytes: 357642
+  jsonl_records: 222
+  first_record_utc: '2026-09-19T16:33:18.823Z'
+  last_record_utc: '2026-09-19T16:40:55.522Z'
+  tool_calls: 36
+  base_instruction_metadata: empty
+  note: Metadata does not prove the contents of the actual provider request.
+reference_and_evaluation_record:
+  private_source_reference: agent-session:01a0b9c1-b41c-70d0-9cb1-60a65afbec72
+  source_filename: rollout-2026-09-19T21-01-14-01a0b9c1-b41c-70d0-9cb1-60a65afbec72.jsonl
+  sha256: 3f28e14d1e95ab5028907f53994a31b9999aeb204aca7b95cfe3d7633f081639
+  hash_scope: First 1855 physical JSONL records, including line endings; excludes
+    the diary request and later appended records.
+  source_bytes: 14951897
+  initial_audit_end_record: 263
+  replay_request_record: 1404
+  replay_request_at: '2026-09-19 22:34:53 +0800'
+  note: Later reference-session material contains repairs and retrospective analysis.
+    Only the initial audit is evidence of what the original review discovered.
+controls:
+- Same pre-fix source revisions and preserved pre-existing edits.
+- Common candidate CLI version 0.133.3 and tool-loop design.
+- Candidate metadata records reasoning effort high.
+- Root agent instructions and expanded Genesis guidance were supplied in the candidate
+  prompts.
+deviations:
+- Task wording and follow-up prompts were not byte-identical; Grok received a Look
+  harder follow-up.
+- Initial sandbox failures interrupted all candidate sessions before substantive tool
+  access.
+- Dependency setup differed; the comparison copies were not reimaged between all runs.
+- GLM and Grok base-instruction metadata was empty; DeepSeek metadata was nonempty.
+  Actual provider request bodies were not examined.
+- GLM historical worktree tests shared dependencies with another checkout, mixing
+  workspace module instances.
+- Sampling seeds, effective reasoning budgets and provider-side settings were not
+  controlled.
+evaluation_method: Retrospective manual trace inspection and finding-level comparison,
+  with targeted source reads and one independent control test. Concerns in intermediate
+  reasoning are distinguished from final actionable findings. No aggregate accuracy
+  or recall percentage is calculated.
+control_test:
+  purpose: Check whether the terminal-reuse failure attributed to older code persists
+    in the normal pre-fix checkout.
+  command: npm test -- --test-name-pattern='^OpenCode reuses its terminal without
+    creating prompt actor state$' --test-timeout=10000 tests/server/opencodeTerminal.unit.test.js
+  passed: 1
+  failed: 0
+  approximate_duration_ms: 698
+  setup_observation: Relative fixture import and bare package import resolved to distinct
+    terminal-registry modules in the shared-dependency worktree.
+  interpretation: The evidence points to a setup artifact; the historical run did
+    not establish a pre-existing product failure.
+interpretive_sources_consulted_after_runs:
+- date: '2026-09-20'
+  title: Building effective agents
+  url: https://www.anthropic.com/engineering/building-effective-agents
+- date: '2026-09-20'
+  title: 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement
+    Learning'
+  url: https://arxiv.org/abs/2501.12948
+result: inconclusive
+conclusion: The recorded candidates selected materially different investigations despite
+  common tooling. Their trace differences are observed; exclusive attribution to model
+  training and general model rankings remain unproven.
+limitations:
+- One repository case and one session per candidate.
+- No preregistered scoring threshold or blinded evaluation.
+- Reference findings are not guaranteed to be a complete defect oracle.
+- Reference reviewer used a different CLI and reasoning effort and is not a matched
+  arm.
+- No live paid-provider call established account misuse or billing expenditure.
+- No repeated-run reliability, latency, cost or frontier-model comparison was measured.
+privacy: Only structured findings, source identifiers and hashes are public. Complete
+  transcripts, raw tool outputs and financial records remain private.
+next_test: Freeze request payloads, dependencies and budgets; preregister the rubric
+  and repeat candidate runs; then vary mandatory verification gates separately.

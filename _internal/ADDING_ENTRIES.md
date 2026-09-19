@@ -11,7 +11,7 @@ Confirm which project and core activity the work belongs to. Create the project 
 Copy the core experiment template and assign the next unused identifier:
 
 ```bash
-cp _templates/research-entry.md _research/RD-2026-008-short-question.md
+cp _templates/research-entry.md _research/RD-2026-009-short-question.md
 ```
 
 Complete these sections before running the experiment:
@@ -28,6 +28,16 @@ Complete these sections before running the experiment:
 - experimental protocol and planned evaluation.
 
 Set `hypothesis_recorded` to the actual time the hypothesis was recorded. Commit the file before experimental work starts. Git history supports the record but does not replace accurate dates or underlying evidence.
+
+For a retrospective account of completed work, use the same sections but add
+`record_basis: retrospective` and an actual `recorded_on` date no earlier than
+the activity's end. Keep `started` and `ended` as the dates of the work. Record
+the actual date of any retrospective hypothesis formulation in
+`hypothesis_recorded`; do not backdate it. Explain which questions were present
+at the time and which hypotheses, thresholds or evaluations were assembled
+later. The site labels this formulation as retrospective, and validation
+permits its later date only with this explicit record basis. Such an account
+does not substitute for a contemporaneous experimental plan.
 
 During the work, append dated actions, investigators, observations, failed runs, deviations, commits, datasets, configurations and logs. Record time and expenditure references in the private company ledger.
 

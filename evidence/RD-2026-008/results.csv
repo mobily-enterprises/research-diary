@@ -1,0 +1,10 @@
+finding_id,reference_finding,deepseek,glm,grok,evidence_note
+F01,Personal-account boundary bypass,missed,missed,missed,Generated provider exposure reproduced in reference audit; no live charged-provider call.
+F02,Undefined wait prevents model summary consumption,found_and_probed,missed,found_second_pass_static,DeepSeek records 221-228; GLM saw wait at 120 and 124; Grok declaration/import checks at 207-212.
+F03,Streaming and final projection duplicate summary requests,found_and_probed,recognized_but_weakened,recognized_report_imprecise,DeepSeek probe at 191-192; GLM reasoning at 122; Grok reasoning at 166. Intended single summary request is distinct from duplicate requests.
+F04,Completed answer can leave main turn busy,not_established,not_established,partial_recovery_delay_only,DeepSeek noted bounded wait at 87; Grok noted delay before recovery at 166; neither established main-turn busy-state failure.
+F05,First partial fragment suppresses later live headline,not_isolated,partial_incorrect_threshold,found_static,Punctuation loss is related but not the same test. GLM tied key consumption incorrectly to the model-request length threshold.
+F06,Native child commands lack parent environment registration,missed,missed,missed,No candidate command targeted the session-environment plugin or native child ancestry.
+F07,Cleanup keys mismatch and native helper conversations leak,found_static,partial_key_mismatch,found_static,GLM identified local key errors but treated new helper sessions as overhead without establishing the native lifecycle leak.
+F08,Punctuation gate drops unusable summaries without fallback,found_and_probed,not_established,found_static,DeepSeek punctuation probes at 269-270; Grok second report; evaluation distinguishes this gate from the earlier undefined-function failure.
+F09,Historical test setup mixes module registries,not_applicable,misclassified_as_product_baseline,not_applicable,Subsequent resolution check and passing normal-checkout control undermine GLM baseline attribution.

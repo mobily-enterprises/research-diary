@@ -1,0 +1,13 @@
+measure,deepseek,glm,grok,interpretation
+Root AGENTS and expanded Genesis guidance supplied,yes,yes,yes,Prompt-supplied guidance is distinct from file reads.
+Genesis project skill received,complete,substantially_truncated,nearly_complete_50_tokens_truncated,Successful output only; failed and interrupted reads excluded.
+Online Blueprint received,complete,partial_truncated,not_read,DeepSeek received personal-account restriction but did not establish its implications.
+Collaboration and Engineering files read,failed_not_successfully_retried,yes,not_read,Expanded guidance was nevertheless supplied to all three.
+Stack file read,yes,yes,not_read,Describes available operations and project configuration.
+Required platform architecture read,no,no,no,No successful command read in any history.
+Genesis source context operation,not_run,run_output_truncated,not_run,GLM records 131-136.
+Tool calls,96,77,36,Includes unsuccessful calls; not an effort or quality score.
+Custom diagnostic runtime probes,3,0,0,Historical existing-test reruns are not counted as new probes.
+Lint executed,focused_and_repository_lint,no,no,Grok static declaration check did not execute lint.
+Existing tests executed,yes,yes,no,Passing tests do not prove an unasserted success path.
+Frontier candidate included,no,no,no,Earlier frontier-assisted reference review is separate from the candidate cohort.
